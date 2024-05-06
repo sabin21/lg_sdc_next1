@@ -5,6 +5,7 @@ import './draft_a.scss'
 import gsap from 'gsap'
 import dynamic from 'next/dynamic'
 import React from 'react'
+import AppHeader from './app_header'
 
 export default function DraftAHome() {
   const LedMatrix = dynamic(() => import('./led_matrix'), {
@@ -13,16 +14,8 @@ export default function DraftAHome() {
 
   return (
     <>
-    <header className='header'>
-      <ul className='gnb-menu-wrap'>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>FAQ</Link></li>
-      </ul>
-    </header>
+    
+    <AppHeader />
 
     <div className="page-wrap">
       <div className='section-hero'>
