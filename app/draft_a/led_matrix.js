@@ -1,22 +1,22 @@
 'use client'
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
 // const DPR = window.devicePixelRatio
 const DPR = 2
 
 export default function LedMatrix({ cell, frame, fps, amount, noise, size, border, track }) {
-  const containerRef = React.useRef(null)
-  const canvasRef = React.useRef(null)
-  const contextRef = React.useRef(null)
-  const gridContextRef = React.useRef(null)
-  const cellsRef = React.useRef(null)
-  const gridCanvasRef = React.useRef(null)
-  const hOffset = React.useRef(null)
-  const vOffset = React.useRef(null)
-  const columns = React.useRef(null)
-  const rows = React.useRef(null)
+  const containerRef = useRef(null)
+  const canvasRef = useRef(null)
+  const contextRef = useRef(null)
+  const gridContextRef = useRef(null)
+  const cellsRef = useRef(null)
+  const gridCanvasRef = useRef(null)
+  const hOffset = useRef(null)
+  const vOffset = useRef(null)
+  const columns = useRef(null)
+  const rows = useRef(null)
 
   const updateCells = () => {
     cellsRef.current = cellsRef.current.map(([x, y]) => {

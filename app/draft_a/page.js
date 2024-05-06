@@ -39,10 +39,30 @@ export default function DraftAHome() {
       <section className='section-con'>
         <div className='container grid-box-1'>
           <div className='card-wrap long gradient-border'>1</div>
-          <div className='card-wrap'>1</div>
-          <div className='card-wrap'>1</div>
-          <div className='card-wrap'>1</div>
-          <div className='card-wrap'>1</div>
+          <div className='card-wrap'>
+            <Link href={'/draft_a'}>
+              <h3>Keynote</h3>
+              <p>실무의 최전선에서 함께하는<br/>LG그룹 임원의 지식 공유</p>
+            </Link>
+          </div>
+          <div className='card-wrap'>
+            <Link href={'/draft_a'}>
+              <h3>Keynote</h3>
+              <p>실무의 최전선에서 함께하는<br/>LG그룹 임원의 지식 공유</p>
+            </Link>
+          </div>
+          <div className='card-wrap'>
+            <Link href={'/draft_a'}>
+              <h3>Keynote</h3>
+              <p>실무의 최전선에서 함께하는<br/>LG그룹 임원의 지식 공유</p>
+            </Link>
+          </div>
+          <div className='card-wrap'>
+            <Link href={'/draft_a'}>
+              <h3>Keynote</h3>
+              <p>실무의 최전선에서 함께하는<br/>LG그룹 임원의 지식 공유</p>
+            </Link>
+          </div>
         </div>
       </section>
 

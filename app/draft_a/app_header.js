@@ -18,10 +18,10 @@ export default function AppHeader(){
       </Link>
       <ul className='gnb-menu-wrap'>
         <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
-        <li><Link href={'/'}>Keynote</Link></li>
+        <li><Link href={'/'}>Track 발표</Link></li>
+        <li><Link href={'/'}>Lgnite LG</Link></li>
+        <li><Link href={'/'}>LG Coding Competition</Link></li>
+        <li><Link href={'/'}>Event</Link></li>
         <li><Link href={'/'}>FAQ</Link></li>
       </ul>
     </header>
