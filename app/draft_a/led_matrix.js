@@ -83,12 +83,13 @@ export default function LedMatrix({ cell, frame, fps, amount, noise, size, borde
     const CanvasObserver = new ResizeObserver(() => refresh())
     CanvasObserver.observe(containerRef.current)
     gsap.ticker.add(draw)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     gsap.ticker.fps(fps)
     refresh()
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cell, frame, fps, amount, noise, size, border])
 
   return (
