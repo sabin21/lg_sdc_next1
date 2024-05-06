@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { useEffect } from 'react'
 import gsap from 'gsap'
 
 // const DPR = window.devicePixelRatio
@@ -72,7 +73,7 @@ export default function LedMatrix({ cell, frame, fps, amount, noise, size, borde
     gsap.ticker.add(draw)
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     gridCanvasRef.current = Object.assign(document.createElement('canvas'), {
       width: containerRef.current.innerWidth * DPR,
       height: containerRef.current.innerHeight * DPR,
@@ -84,7 +85,7 @@ export default function LedMatrix({ cell, frame, fps, amount, noise, size, borde
     gsap.ticker.add(draw)
   }, [])
 
-  React.useEffect(() => {
+  useEffect(() => {
     gsap.ticker.fps(fps)
     refresh()
 
