@@ -1,0 +1,33 @@
+{
+  "name": "lg_sdc_next1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/csg": "^3.2.0",
+    "@react-three/drei": "^9.105.6",
+    "@react-three/fiber": "^8.16.3",
+    "gsap": "^3.12.5",
+    "lil-gui": "^0.19.2",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "three": "^0.164.1",
+    "use-tweaks": "^0.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "glsl-loader": "^0.0.1",
+    "glslify-loader": "^2.0.0",
+    "postcss": "^8",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.76.0",
+    "tailwindcss": "^3.4.1"
+  }
+}
