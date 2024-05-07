@@ -1,5 +1,5 @@
 
-body{ background-color: #141414; }
+body{  }
 
 .header {
   position: fixed; width:100%; height:104px;
@@ -16,6 +16,17 @@ body{ background-color: #141414; }
     }
   }
 }
+.btn-register{
+  position: fixed; width:340px; height:80px; right: 100px; bottom: 88px;
+  background: linear-gradient(115.25deg, #FA2B2B 30.21%, #AD00FF 68.63%);
+  border-radius: 100px; z-index: 100; display: flex; justify-content: center; align-items: center;
+  font-size:24px; font-weight: bold; cursor: pointer;
+}
+.body-back-color{
+  position: fixed; display: block; width:100%; height: 100vh; top:0; left:0; z-index: -1;
+  left:0; top:0; background-color: #141414;
+}
+
 .page-wrap{
   width:100%; min-height:100vh; 
   .section-hero{
@@ -38,26 +49,31 @@ body{ background-color: #141414; }
           display: block; width:1px; height: 32px; background-color: var(--gray-600);
           margin:0 20px;
         }
-      }
-      
+      }  
     }
     .hero-back-mask{
       position: absolute; overflow: hidden; width:calc(100% - 112px); height: calc(100vh - 300px);
       margin:auto; left:0; right:0; top:104px; display: flex; align-items: center;
       border-radius: 16px; border:1px solid #252525; 
-      // filter: drop-shadow(4px 4px 16px rgba(0,0,0,0.9));
       &::before{
         content:''; display: block; position: absolute; width: 100%; height: 100%; 
         z-index: 5; left:0; top:0; 
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
       }
     }
     .register-bar{
       width:calc(100% - 112px); height:140px; background-color: black; position: absolute;
-      bottom: 56px; border-radius: 16px;
+      bottom: 56px; border-radius: 16px; overflow: hidden; display: flex;
+      align-items: center;
+      >.text-wrap{
+        font-size:20px; padding-left: 64px; color:var(--gray-400); font-weight: bold;
+      }
     }
   }
 }
+
+/*----------------*/
+
 .section-con {
   width:100%; min-height: 100vh;
   >.container{
@@ -85,7 +101,7 @@ body{ background-color: #141414; }
   }
 }
 
-//---------------
+/*----------------*/
 
 .gradient-border {
   --borderWidth: 2px;

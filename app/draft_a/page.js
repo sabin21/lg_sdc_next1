@@ -1,21 +1,44 @@
 'use client'
-
-import Link from 'next/link'
 import './draft_a.scss'
-import gsap from 'gsap'
+
+import React, { useLayoutEffect, useRef } from 'react'
+import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import React from 'react'
 import AppHeader from './app_header'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function DraftAHome() {
   const LedMatrix = dynamic(() => import('./led_matrix'), {
     ssr:false
-})
+  });
+
+  const registerBtn = useRef(null);
+  const registerBtnText = useRef(null);
+
+  useLayoutEffect( () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tlRegister = gsap.timeline({
+        scrollTrigger: {
+            trigger: document.documentElement,
+            scrub: true,
+            start: "top",
+            end: "+=300px",
+        },
+    })
+
+    tlRegister
+    .to(registerBtn.current, {height: "100px", width: "100px", right:"20px", bottom:"20px", fontSize:"16px"}, 0)
+  }, [])
 
   return (
-    <>    
+    <>
+    <span className='body-back-color'></span>
     <AppHeader />
-
+    <botton className="btn-register" ref={registerBtn}>
+      사전등록
+    </botton>
     <div className="page-wrap">
       <div className='section-hero'>
         <div className='hero-back-mask'>
@@ -38,7 +61,11 @@ export default function DraftAHome() {
             </div>
           </div>
         </div>
-        <div className='register-bar'></div>
+        <div className='register-bar'>
+          <div className='text-wrap'>
+            <span>LG그룹 개발자 여러분의 경험과 열정을 공유하고 지식과 혁신적인 아이디어를 나누는 자리</span>
+          </div>
+        </div>
       </div>
       
       <section className='section-con'>

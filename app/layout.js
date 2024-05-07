@@ -2,6 +2,8 @@ import localFont from 'next/font/local';
 import "./globals.css";
 import '../styles/common.scss';
 
+import SmoothScrolling from './components/SmoothScrolling';
+
 const pretendard = localFont({
   src: "../public/fonts/pretendard/variable/woff2/PretendardVariable.woff2",
   display: "swap",
@@ -17,7 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="kr">
-      <body className={pretendard.className}>{children}</body>
+      <body className={pretendard.className}>
+        <SmoothScrolling>
+          {children}
+        </SmoothScrolling>
+      </body>
     </html>
   );
 }
