@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="kr">
       <body className={pretendard.className}>
-        <SmoothScrolling>
+        {/* <SmoothScrolling> */}
           {children}
-        </SmoothScrolling>
+        {/* </SmoothScrolling> */}
       </body>
     </html>
   );
