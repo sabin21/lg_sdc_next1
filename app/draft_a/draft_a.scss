@@ -1,5 +1,5 @@
 
-body{  }
+body{ background-color: black; }
 
 .header {
   position: fixed; width:100%; height:104px;
@@ -23,8 +23,12 @@ body{  }
   font-size:24px; font-weight: bold; cursor: pointer;
 }
 .body-back-color{
+  position: fixed; display: block; width:100%; height: 100vh; top:0; left:0; z-index: -2;
+  left:0; top:0; background-color: #1a1a1a;
+}
+.body-back-color2{
   position: fixed; display: block; width:100%; height: 100vh; top:0; left:0; z-index: -1;
-  left:0; top:0; background-color: #141414;
+  left:0; top:0; 
 }
 
 .page-wrap{
@@ -83,7 +87,7 @@ body{  }
       min-height: 800px; gap: 24px; padding-top: 200px; 
       >.card-wrap{
         width:100%; border: 1px solid var(--gray-800);
-        border-radius: 16px; padding: 8% 10%; background-color: #0E0E0E;
+        border-radius: 16px; padding: 8% 10%; background-color: #030303;
         &.long{
           grid-row: span 2;
         }

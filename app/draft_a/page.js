@@ -14,31 +14,55 @@ export default function DraftAHome() {
   });
 
   const registerBtn = useRef(null);
-  const registerBtnText = useRef(null);
+  const pageBack = useRef(null);
+  const pageBack2 = useRef(null);
 
   useLayoutEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
 
     const tlRegister = gsap.timeline({
-        scrollTrigger: {
-            trigger: document.documentElement,
-            scrub: true,
-            start: "top",
-            end: "+=300px",
-        },
-    })
+      scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: true, start: "top", end: "+=300px",
+      },
+    });
 
     tlRegister
-    .to(registerBtn.current, {height: "100px", width: "100px", right:"20px", bottom:"20px", fontSize:"16px"}, 0)
-  }, [])
+    .to(registerBtn.current, {height: "100px", width: "100px", right:"20px", bottom:"20px", fontSize:"16px"}, 0);
+
+    const tlBackColor = gsap.timeline({
+      scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: true, start: "top", end: "+=800px",
+      },
+    });
+    tlBackColor.to(pageBack.current, {
+      backgroundColor:"black"
+    });
+
+    const tlBackColor2 = gsap.timeline({
+      scrollTrigger: {
+          trigger: document.documentElement,
+          scrub: true, 
+          start: document.body.offsetHeight*0.4, end: 'bottom-=800px',
+          // start: '1500px', end: 'bottom-=800px'
+      },
+    });
+    tlBackColor2.to(pageBack2.current, {
+      backgroundColor:"#3C1272"
+    });
+
+  }, []);
+
 
   return (
     <>
-    <span className='body-back-color'></span>
+    <span className='body-back-color' ref={pageBack}></span>
+    <span className='body-back-color2' ref={pageBack2}></span>
     <AppHeader />
-    <botton className="btn-register" ref={registerBtn}>
+    <button className="btn-register" ref={registerBtn}>
       사전등록
-    </botton>
+    </button>
     <div className="page-wrap">
       <div className='section-hero'>
         <div className='hero-back-mask'>
@@ -96,6 +120,10 @@ export default function DraftAHome() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className='section-con'>
+
       </section>
 
     </div>
