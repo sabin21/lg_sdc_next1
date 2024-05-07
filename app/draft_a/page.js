@@ -13,8 +13,7 @@ export default function DraftAHome() {
 })
 
   return (
-    <>
-    
+    <>    
     <AppHeader />
 
     <div className="page-wrap">
@@ -30,10 +29,16 @@ export default function DraftAHome() {
             border={2}
             track={'#000000'}
           />
+          <div className='hero-headline-wrap'>
+            <img className='hero-headline' src="./img/draft_a/hero_headline.svg" />
+            <div className='hero-info-wrap'>
+              <span>2024.9.9~10</span>
+              <span className='divide-line'></span>
+              <span>LG사이언스파크 ISC</span>
+            </div>
+          </div>
         </div>
-        <div className='hero-headline-wrap'>
-          <img src="./img/draft_a/hero_headline.svg" />
-        </div>
+        <div className='register-bar'></div>
       </div>
       
       <section className='section-con'>
